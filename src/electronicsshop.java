@@ -6,7 +6,10 @@ vector<string> split_string(string);
 
 /*
  * A person wants to determine the most expensive computer keyboard and USB drive that can be purchased with a give budget. Given price lists for keyboards and USB drives and a budget, find the cost to buy them. If it is not possible to buy both items, return -1.
- * Complete the getMoneySpent function below.
+ * Complete the getMoneySpent function below. getMoneySpent has the following parameters: 
+ * int keyboards[n]: the keyboard prices
+ * int drives[m]: the drive prices
+ * int b: the budget
  */
 int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
     /*
