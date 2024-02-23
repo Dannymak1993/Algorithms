@@ -39,11 +39,14 @@ class Result {
      * The function accepts INTEGER_ARRAY ar as parameter.
      */
 
-    public static int simpleArraySum(List<Integer> ar) {
-    // Write your code here
-
+	public static int simpleArraySum(List<Integer> ar) {
+        // Write your code here
+        int sum = 0; // Initialize a variable 'sum' to keep track of the sum
+        for (int num : ar) {  // Loop through each element 'num' in the array 'ar'
+            sum += num; // Add the current element 'num' to the 'sum'
+        }
+        return sum;
     }
-
 }
 
 public class Solution {
