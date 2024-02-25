@@ -41,7 +41,7 @@ class Result {
 
 	public static int simpleArraySum(List<Integer> ar) {
         // Write your code here
-        int sum = 0; // Initialize a variable 'sum' to keep track of the sum
+        int sum = 0; // Initialize A variable 'sum' to keep track of the sum
         for (int num : ar) {  // Loop through each element 'num' in the array 'ar'
             sum += num; // Add the current element 'num' to the 'sum'
         }
