@@ -28,11 +28,26 @@ If the difference between the grade and the next multiple of 5 is less than 3, r
 If the value of grade is less than 38, no rounding occurs as the result will still be a failing grade.
      */
 
-    public static List<Integer> gradingStudents(List<Integer> grades) {
-    // Write your code here
+	public static List<Integer> gradingStudents(List<Integer> grades) {
+        List<Integer> roundedGrades = new ArrayList<>();
 
+        for (int grade : grades) {
+            if (grade < 38) {
+                // No rounding for failing grades
+                roundedGrades.add(grade);
+            } else {
+                // Calculate the next multiple of 5 and check the rounding condition
+                int nextMultipleOf5 = (int) Math.ceil(grade / 5.0) * 5;
+                if (nextMultipleOf5 - grade < 3) {
+                    roundedGrades.add(nextMultipleOf5);
+                } else {
+                    roundedGrades.add(grade);
+                }
+            }
+        }
+
+        return roundedGrades;
     }
-
 }
 
 public class Solution {
