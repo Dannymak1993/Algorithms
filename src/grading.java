@@ -42,6 +42,7 @@ If the value of grade is less than 38, no rounding occurs as the result will sti
                     roundedGrades.add(nextMultipleOf5);
                 } else {
                     roundedGrades.add(grade);
+                    // add grade to end rounded grade array
                 }
             }
         }
