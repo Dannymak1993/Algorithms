@@ -36,7 +36,6 @@ class Result {
             }
             // If aRating == bRating, neither person receives a point
         }
-
         // Create a list to store the results
         List<Integer> result = new ArrayList<>();
         result.add(alicePoints);
