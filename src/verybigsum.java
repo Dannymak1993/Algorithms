@@ -32,9 +32,13 @@ Return
 long: the sum of all array elements
      */
 
-    public static long aVeryBigSum(List<Long> ar) {
-    // Write your code here
-
+	public static long aVeryBigSum(List<Long> ar) {
+        // Write your code here
+        long sum = 0;
+        for (Long num : ar) {
+            sum += num;
+        }
+        return sum;
     }
 
 }
