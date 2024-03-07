@@ -21,12 +21,27 @@ class Result {
      * Given a square matrix, calculate the absolute difference between the sums of its diagonals.
      */
 
-    public static int diagonalDifference(List<List<Integer>> arr) {
-    // Write your code here
+	 public static int diagonalDifference(List<List<Integer>> arr) {
+	        // Write your code here
+	        int leftDiagonalSum = 0;
+	        int rightDiagonalSum = 0;
 
-    }
+	        int size = arr.size();
 
-}
+	        // Calculate the sum of the left diagonal
+	        for (int i = 0; i < size; i++) {
+	            leftDiagonalSum += arr.get(i).get(i);
+	        }
+
+	        // Calculate the sum of the right diagonal
+	        for (int i = 0; i < size; i++) {
+	            rightDiagonalSum += arr.get(i).get(size - 1 - i);
+	        }
+
+	        // Calculate the absolute difference between the sums
+	        return Math.abs(leftDiagonalSum - rightDiagonalSum);
+	    }
+	}
 
 public class Solution {
     public static void main(String[] args) throws IOException {
