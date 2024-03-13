@@ -20,12 +20,33 @@ class Result {
      * Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. Print the decimal value of each fraction on a new line with 6  places after the decimal.
      */
 
-    public static void plusMinus(List<Integer> arr) {
-    // Write your code here
+	 public static void plusMinus(List<Integer> arr) {
+	        // Initialize counters for positive, negative, and zero elements
+	        int positiveCount = 0, negativeCount = 0, zeroCount = 0;
 
-    }
+	        // Iterate through the array and count positive, negative, and zero elements
+	        for (Integer num : arr) {
+	            if (num > 0) {
+	                positiveCount++;
+	            } else if (num < 0) {
+	                negativeCount++;
+	            } else {
+	                zeroCount++;
+	            }
+	        }
 
-}
+	        // Calculate ratios
+	        int totalElements = arr.size();
+	        double positiveRatio = (double) positiveCount / totalElements;
+	        double negativeRatio = (double) negativeCount / totalElements;
+	        double zeroRatio = (double) zeroCount / totalElements;
+
+	        // Print the ratios with 6 decimal places
+	        System.out.printf("%.6f%n", positiveRatio);
+	        System.out.printf("%.6f%n", negativeRatio);
+	        System.out.printf("%.6f%n", zeroRatio);
+	    }
+	}
 
 public class Solution {
     public static void main(String[] args) throws IOException {

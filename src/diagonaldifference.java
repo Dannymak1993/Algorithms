@@ -22,7 +22,6 @@ class Result {
 	        // Write your code here
 	        int leftDiagonalSum = 0;
 	        int rightDiagonalSum = 0;
-
 	        int size = arr.size();
 
 	        // Calculate the sum of the left diagonal
