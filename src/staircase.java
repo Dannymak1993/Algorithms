@@ -18,12 +18,10 @@ class Result {
      * The function accepts INTEGER n as parameter.
      * 
      * this is a staircase of size n=4
-     * 
      *    #
      *   ##
      *  ###    
      * ####
-     * 
      * Write a program that prints a staircase of size n.
      */
 
