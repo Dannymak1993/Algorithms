@@ -20,12 +20,26 @@ class Result {
      * Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
      */
 
-    public static void miniMaxSum(List<Integer> arr) {
-    // Write your code here
+	 public static void miniMaxSum(List<Integer> arr) {
+	        // Initialize variables to store min and max sums
+	        long minSum = Long.MAX_VALUE;
+	        long maxSum = Long.MIN_VALUE;
+	        long totalSum = 0;
 
-    }
+	        // Calculate total sum and find min and max sums
+	        for (int num : arr) {
+	            totalSum += num;
+	        }
 
-}
+	        for (int num : arr) {
+	            minSum = Math.min(minSum, totalSum - num);
+	            maxSum = Math.max(maxSum, totalSum - num);
+	        }
+
+	        // Print the respective minimum and maximum values
+	        System.out.println(minSum + " " + maxSum);
+	    }
+	}
 
 public class Solution {
     public static void main(String[] args) throws IOException {
