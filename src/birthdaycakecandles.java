@@ -20,12 +20,22 @@ class Result {
      * You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
      */
 
-    public static int birthdayCakeCandles(List<Integer> candles) {
-    // Write your code here
-
+	public static int birthdayCakeCandles(List<Integer> candles) {
+        // Find the maximum height of candles
+        int maxHeight = Collections.max(candles);
+        
+        // Count how many candles have the maximum height
+        int tallestCandlesCount = 0;
+        for (int candleHeight : candles) {
+            if (candleHeight == maxHeight) {
+                tallestCandlesCount++;
+            }
+        }
+        
+        return tallestCandlesCount;
     }
-
 }
+
 
 public class Solution {
     public static void main(String[] args) throws IOException {
