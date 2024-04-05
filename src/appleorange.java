@@ -34,9 +34,26 @@ When a fruit falls from its tree, it lands d units of distance from its tree of 
      *Given the value of d for m apples and n oranges, determine how many apples and oranges will fall on Sam's house (i.e., in the inclusive range |s,t|)?
      */
 
-    public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
-    // Write your code here
+	public static void countApplesAndOranges(int s, int t, int a, int b, List<Integer> apples, List<Integer> oranges) {
+        int appleCount = 0;
+        int orangeCount = 0;
 
+        for (Integer appleDistance : apples) {
+            int applePosition = a + appleDistance;
+            if (applePosition >= s && applePosition <= t) {
+                appleCount++;
+            }
+        }
+
+        for (Integer orangeDistance : oranges) {
+            int orangePosition = b + orangeDistance;
+            if (orangePosition >= s && orangePosition <= t) {
+                orangeCount++;
+            }
+        }
+
+        System.out.println(appleCount);
+        System.out.println(orangeCount);
     }
 
 }
