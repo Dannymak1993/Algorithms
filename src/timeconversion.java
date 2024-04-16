@@ -27,9 +27,24 @@ Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 
     public static String timeConversion(String s) {
     // Write your code here
+    	String[] parts = s.split(":");
+        int hour = Integer.parseInt(parts[0]);
+        int minute = Integer.parseInt(parts[1]);
+        int second = Integer.parseInt(parts[2].substring(0, 2));
+        String meridiem = parts[2].substring(2);
 
+        // Adjust hour based on AM/PM
+        if (meridiem.equalsIgnoreCase("PM") && hour != 12) {
+            hour += 12;
+        } else if (meridiem.equalsIgnoreCase("AM") && hour == 12) {
+            hour = 0;
+        }
+
+        // Format the hour, minute, and second into 24-hour format
+        String militaryTime = String.format("%02d:%02d:%02d", hour, minute, second);
+
+        return militaryTime;
     }
-
 }
 
 public class Solution {
