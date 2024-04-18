@@ -12,8 +12,7 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'timeConversion' function below.
+    /* Complete the 'timeConversion' function below.
      * The function is expected to return a STRING.
      * The function accepts STRING s as parameter.
      * Given a time in -hour AM/PM format, convert it to military (24-hour) time.
