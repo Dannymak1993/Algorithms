@@ -29,11 +29,12 @@ The second kangaroo starts at location x2 and moves at a rate of v2 meters per j
 You have to figure out a way to get both kangaroos at the same location at the same time as part of the show. If it is possible, return YES, otherwise return NO.
      */
 
-    public static String kangaroo(int x1, int v1, int x2, int v2) {
-    // Write your code here
+	public static String kangaroo(int x1, int v1, int x2, int v2) {
+        // If the first kangaroo is behind the second one and is slower, they'll never meet
+        if ((x1 < x2 && v1 <= v2) || (x2 < x1 && v2 <= v1))
+            return "NO";
 
     }
-
 }
 
 public class Solution {
